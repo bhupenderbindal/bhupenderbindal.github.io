@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://bhupenderbindal.github.io/sitemap.xml
+Sitemap: https://bhupenderbindal.github.iobhupenderbindal.github.io/sitemap.xml
