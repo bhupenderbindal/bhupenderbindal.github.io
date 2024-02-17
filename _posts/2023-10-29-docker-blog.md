@@ -2,30 +2,23 @@
 layout: post
 title: Dockerfile, docker image and docker container :what is missed in a beginner tutorial
 date: 2023-10-29 10:14:00-0400
-description: an example of a blog post with table of contents on a sidebar
-categories: sample-posts toc sidebar
+description: docker for beginner
+categories: containerisation 
 giscus_comments: true
 related_posts: false
 toc:
   sidebar: left
 ---
-This post might be useful to someone who is trying to create docker images or run docker containers and has already gone through some "getting started" docker tutorials and blogs but still cannot get his/her head around it. If you are like me who does not have computer science degree but find it interesting, you might enoy reading. Hence comments are welcomed from beginners as well as experts.
-
-Contents:
-1. Motivation behind a post about docker
-2. Dockerfile to a running docker container
-3. Docker commands that are pretty useful
-4. Some mistakes which I did and their solution
-5. Multi-stage docker images
+This post might be useful to someone who is trying to create docker images or run docker containers and has already gone through some "getting started" docker tutorials and blogs but still cannot get his/her head around it. If you are like me who does not have a computer science degree but finds it interesting, you might enjoy reading. Hence comments are welcomed from beginners as well as experts.
 
 ## Motivation behind a post about docker
 {:data-toc-text="Motivation"}
 
- After hosting a demo of my app on huggingface using gradio option, I found that huggingface creates a container to run the gradio app. Already there is tons of info about docker containers and their purpose.  This post deals with some problems that a beginner face and the information which is usually skipped by a beginner. Hence the following text can be considered as an extra information that a beginner like me found insightful and made more confident about writing own dockerfile, creating images and running the container.
+ After hosting a demo of my app on huggingface using gradio option, I found that huggingface creates a container to run the gradio app. Already there is tons of info about docker containers and their purpose.  This post deals with some problems that a beginner faces and the information that is usually skipped by a beginner. Hence the following text can be considered as extra information that a beginner like me found insightful and made me more confident about writing my own dockerfile, creating images and running the container.
 
 ## Dockerfile to a running docker container
 
-First thing for running an application or service is an docker image, which could either be pulled from a verified source or built on top of existing docker image from a verified source(which is generally the case) by creating Dockerfile and obtaining an image that does what you would like to do. Once you have the required docker image, then it can run to create a container which can be hosted on your local computer or in cloud through a cloud service provider platform or **even on huggingface spaces like I did for my first image**.
+The first thing for running an application or service is a docker image, which could either be pulled from a verified source or built on top of an existing docker image from a verified source(which is generally the case) by creating a Dockerfile and obtaining an image that does what you would like to do. Once you have the required docker image, then it can run to create a container that can be hosted on your local computer or in the cloud through a cloud service provider platform or **even on huggingface spaces like I did for my first image**.
 
 
 <div class="col-sm mt-3 mt-md-0">
@@ -33,44 +26,44 @@ First thing for running an application or service is an docker image, which coul
 </div>
 
 
-As shown in the above figure, docker offers different commands which are useful in each stage. The above commands list far from exhaustive but covers most that a newbie requires to build a docker container. The docker documentation provides details of each of the above commands. In the following section, we will explore some of those commands with their specific usage that you might find useful debug a container which cannot start or to view the logs with any included error messages which one might miss out.
+As shown in the above figure, docker offers different commands which are useful in each stage. The above commands list is far from exhaustive but covers most that a newbie requires to build a docker container. The docker documentation provides details of each of the above commands. In the following section, we will explore some of those commands with their specific usage that you might find useful to debug a container that cannot start or to view the logs with any included error messages that one might miss out.
 
 ## Commands that are pretty useful
 
-1. You have created a docker image but when you run it, nothing or something wrong happens. You need to debug the container.
-  - For this it's good to have an understanding of ENTRYPOINT and CMD  in a dockerfile. ENTRYPOINT decides which executable in the container should be executed when the container is run ([read more](https://docs.docker.com/engine/reference/run/#entrypoint-default-command-to-execute-at-runtime)). The default entrypoint is "/bin/bash -c". CMD provides the arguments that can be passed to the ENTRYPOINT. [A nice blog giving simple example](https://www.howtogeek.com/devops/the-difference-between-cmd-and-entrypoint-in-docker-images/).
-  With the default entrypoint,i.e. when you don't define any entrypoint, one can execute a run command followed by command to override the defined CMD. For example, a bash terminal to explore the docker container and to check if everything works inside the container, for example the below command will run the container with a shell terminal and letting you explore the container with a bash shell:
+1. You have created a docker image but when you run it, nothing or something wrong
+    happens. You need to debug the container.
+    - For this, it's good to have an understanding of ENTRYPOINT and CMD  in a docker file. ENTRYPOINT decides which executable in the container should be executed when the container is run ([read more](https://docs.docker.com/engine/reference/run/#entrypoint-default-command-to-execute-at-runtime)). The default entrypoint is "/bin/bash -c". CMD provides the arguments that can be passed to the ENTRYPOINT. [A nice blog gives simple example](https://www.howtogeek.com/devops/the-difference-between-cmd-and-entrypoint-in-docker-images/).
+    With the default entrypoint,i.e. when you don't define any entrypoint, one can execute a run command followed by the command to override the defined CMD. For example, a bash terminal to explore the docker container and to check if everything works inside the container, for example, the below command will run the container with a shell terminal and let you explore the container with a bash shell:
 
-  ```
-  docker run -it --name <container_name> <image_name> sh
-  ```
-  
-  
-2. Your container is running but does not work as expected or you want to explore file structure or processes inside the container or install or remove inside the container.
-  - docker exec is a nice option to execute some command in a running container 
+    ```
+    docker run -it --name <container_name> <image_name> sh
+    ```
+2. Your container is running but does not work as expected or you want to explore file
+  structure or processes inside the container or install or remove inside the container.
+  - docker exec is a nice option to execute some commands in a running container 
 
-  ```
-  docker exec -it <container name> sh
-  docker exec -it <container name> date
-  docker exec -it <container name> top
-  docker exec -it <container name> bash -c "curl http://127.0.0.1:7680"
-  ```
-
+    ```
+    docker exec -it <container name> sh
+    docker exec -it <container name> date
+    docker exec -it <container name> top
+    docker exec -it <container name> bash -c "curl http://127.0.0.1:7680"
+    ```
+    
 3. You want to see what output is generated by the processes inside the docker if any. 
-  - logs : to view the logs of the container
+  - logs: to view the logs of the container
   - save the logs of image creation to a file to view the steps and explore the errors in image creation
   - bash -c option with run command
 
-## Some mistakes which I did and their solution
-  - not setting the server name to "0.0.0.0" for the webapplication and hence could not connect to the host port
+## Some mistakes that I made and their solution
+  - not setting the server name to "0.0.0.0" for the web application and hence could not connect to the host port
   [as discussed on stackoverflow question](https://stackoverflow.com/questions/39525820/docker-port-forwarding-not-working)
   - not creating a workdir in the container which can cause problem if your following command has to do with the files in the directory 
-  - using docker cp to copy a local file in container then launching the app. But I missed the obvious pitfall of using the docker cp command that it only make temp change to a container which is still missing from the image and wont work when the image is deployed again locally or on cloud
+  - using docker cp to copy a local file in a container and then launching the app. But I missed the obvious pitfall of using the docker cp command that it only makes a temp change to a container that is still missing from the image and won't work when the image is deployed again locally or on the cloud
 
 
 
 ## Multi-stage docker images
-  - purpose : Some application that you want to containerise might have a build stage, where the compilation of code occurs to create final artifacts, and a run time which only requires the final artifacts for the final application. In such cases, **multi-stage build** can reduce the size of your images which could be a problem for docker image uploading and downloading, especially when it is performed over different hosts.
-  - example
+  - purpose: Some applications that you want to containerize might have a build stage, where the compilation of code occurs to create final artifacts and a run time that only requires the final artifacts for the final application. In such cases, **multi-stage build** can reduce the size of your images which could be a problem for docker image uploading and downloading, especially when it is performed over different hosts.
+  - example **TODO**
 
 [//]: # (27.10.2023 docker issues:1. If not using wheel in the requirements.txt then an error occurs in package installation inside the docker 2. Commenting out packages = find packages() installs the package correctly in local system but installs only app.py in the target directory 3. Solution: the mistake eas with the copy command which copiied files from package folder to myapp inside docker and caused problematic package buuilding as compared to local package installation)
