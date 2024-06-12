@@ -21,8 +21,12 @@ social: true  # includes social icons at the bottom of the page
 
 I am a master’s student in Computational Sciences in Engineering course at TU Braunschweig with a keen interest in machine learning and python programming. Have a look at the [projects](/projects/) section! 
 <!-- <a href="/projects/">projects</a> -->
- 
+  
 "Does your model have data bias and leakage?" That is the question.
+
+Quote from others:
+
+“Models are almost always imperfect. This is fine as long as you are aware of this” - Michael Elad, Technion - Israel Institute of Technology, Computer Science
 
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`.  -->
 

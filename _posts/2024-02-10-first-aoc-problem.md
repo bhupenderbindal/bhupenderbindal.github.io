@@ -44,7 +44,7 @@ The LOR for both the patterns are shown below:
 1. Here the line of refelection is between columns 5 and 6. Column one is not involved in the reflection as 9 is an odd number of columns, here column 1 is the extra and ignored.
 ```
 123456789
-        ><   
+       ><   
 #.##..##.
 ..#.##.#.
 ##......#
@@ -52,7 +52,7 @@ The LOR for both the patterns are shown below:
 ..#.##.#.
 ..##..##.
 #.#.##.#.
-        ><
+       ><
 123456789
 ```
 2. Here the LOR is between rows 4 and 5. Here row 1 is not involved in the reflection. 
