@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>programming | Bhupender  Bindal</title>
+    <title>My first Advent of code problem :part2 in C++ | Bhupender  Bindal</title>
     <meta name="author" content="Bhupender  Bindal">
-    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-">
+    <meta name="description" content="AOC day 13 in C++ and comparison with python">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,13 +32,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
 
     
+    <!-- Sidebar Table of Contents -->
+    <link href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" rel="stylesheet">
+    
 
     <!-- Styles -->
     
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://bhupenderbindal.github.io/blog/category/programming/">
+    <link rel="canonical" href="https://bhupenderbindal.github.io/blog/2024/first-aoc-problem-in-c++/">
 
     <!-- Dark Mode -->
     
@@ -117,37 +119,122 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <div class="post">
+        
+        <div class="row">
+          <!-- sidebar, which will move to the top on a small screen -->
+          <div class="col-sm-3">
+            <nav id="toc-sidebar" class="sticky-top"></nav>
+          </div>
+          <!-- main content area -->
+          <div class="col-sm-9">
+            <!-- _layouts/post.html -->
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"> <i class="fas fa-tag fa-sm"></i> programming </h1>
-    <p class="post-description"> an archive of posts in this category </p>
+    <h1 class="post-title">My first Advent of code problem :part2 in C++</h1>
+    <p class="post-meta">February 10, 2024</p>
+    <p class="post-tags">
+      <a href="/blog/2024"> <i class="fas fa-calendar fa-sm"></i> 2024 </a>
+        ·  
+        <a href="/blog/category/programming">
+          <i class="fas fa-tag fa-sm"></i> programming</a>  
+          <a href="/blog/category/logic">
+          <i class="fas fa-tag fa-sm"></i> logic</a>  
+          
+
+    </p>
   </header>
 
-  <article>
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        
-        <tr>
-          <th scope="row">Feb 10, 2024</th>
-          <td>
-              <a class="post-link" href="/blog/2024/first-aoc-problem-in-c++/">My first Advent of code problem :part2 in C++</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Feb 10, 2024</th>
-          <td>
-              <a class="post-link" href="/blog/2024/first-aoc-problem/">My first Advent of code problem</a>
-          </td>
-        </tr>
-      
-      </table>
-    </div>
-  </article>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p><strong>Intended audience: Beginners not masters.</strong></p>
 
+<p>Now, I will try to refactor the code for the problem and try to code the same logic in C++ and improve my understanding of programming concepts with this execercise. Followed by what I learned in this attempt, which might be useful for someone else reading it.</p>
+
+<p><strong>NOTE:</strong> This is no sense an attempt to compare the languages.
+ <!-- Followed by the comparison between the two in terms of obviously runtime.  --></p>
+
+<h2 data-toc-text="Python code refactoring" id="python-code-refactoring">Python code refactoring</h2>
+<p>Although I had looked at the shortest form of solutions code, I refactored my code myself for two reasons:</p>
+<ol>
+  <li>It will help me understand what parts and logic of my code were redundant or could be better written in the first place. For example, I found that I can write code with less of my favorite “if statement”, which is also recommended way. Another example is the “return statement” in combination with “if statement” is a point of play. One can add the return statement with the “if condition” and follow it with a return statement without using the “else condition” if no else logic is required and utilize this point of play as per requirement.</li>
+  <li>The short solutions are certainly good but my current coding style is more verbose than that. Copying the solution won’t help in improving. I still need to learn with practice to write logic and flow in a more precise way but with good readability for myself and others.</li>
+</ol>
+
+<h2 id="solving-in-c">Solving in C++</h2>
+
+<!-- After starting to solve in C++, I got the obvious realization that the same logic cannot be followed as data structures used in python with numpy has a very different API than that of data structures in C++. So I tried to adopt my base logic to C++.  -->
+
+<p>I dont want to repeat what are the differences between python and C++, as there are already many blogs and videos over it some bad, some good. Even I have watched a couple of them, but none of them can give me the feeling/understanding that I get by writing some C++ code myself and experience the most obvious differences, which anyone can understand them by hello-world in both the languages, and the more strong differences that hit you when you move from python to c++ code, reinforcing some programming concepts by experiencing how different languages deal with them. <em>As experienced people say talking about the difference between two languages is unncessary and problem one is trying to solve is more important. Do what is more comfortable to you and more importantly align with the goals of the problem/task one is trying to solve.</em></p>
+
+<p><!-- Or one is trying to appreciate the beauty of how different languages deal and apply the same concepts improving general understanding. --></p>
+
+<p>After all this great talk above, i am still a novice and will try to write “thats interesting” that I can see in short time.
+First of all, it was a tough job even to code the same logic in C++ due to the obvious lack of knowledge and practice with C++ containers and generic algorithms related to them.
+Hence I used for loops at many places iterating element by element and even transposing a vector of strings. Oh boy, that was entertaining and frustrating at the same time.</p>
+
+<p>I thought of attaching my solution in C++ but right now I avoid you the headache of reading it and in addition to that I am still on the journey of being comfortable sharing my not so good code. Hence moving to more important stuff in the next section.</p>
+
+<h2 id="lessons-learned-thats-interesting">Lessons learned/ That’s interesting</h2>
+<p>As I start writing this section, I discovered more important questions that I needed to look into.</p>
+
+<ul>
+  <li>why i even use vectors instead of arrays in c++: with list() and numpy array() one can easily create arrays as required. but in c++ one uses vectors if one does not the size of array beforehand</li>
+  <li>why create new arrays (in the findlor function) instead of using the slice as in python : is this issue of pass by value(copy with extra space) and pass by refernce for functions –&gt; read the book</li>
+  <li>concept of view and shallow copy when passing objects in python</li>
+</ul>
+
+<ol>
+  <li>As c++ requires type of the object that container holds, I have to write “vector&lt;vector<string>&gt; all_patterns;" which on the first sight looks extra work but in other look it promotes to think before about what are you going to store in the container which in turn promotes "think before you write code". This guide of type allows to think what type of contaianer, what it will be storing and what operations can be performed on it. In python, in my experience I create a list and simply keep on appending to it whatever type is required and later during further operations or in case of debugging I can think over the types etc. Again both have their uses.</string>
+</li>
+  <li>
+</li>
+</ol>
+
+<!-- 
+## Some mistakes which I did and their solution
+  - not setting the server name to "0.0.0.0" for the webapplication and hence could not connect to the host port
+  [as discussed on stackoverflow question](https://stackoverflow.com/questions/39525820/docker-port-forwarding-not-working)
+  - not creating a workdir in the container which can cause problem if your following command has to do with the files in the directory 
+  - using docker cp to copy a local file in container then launching the app. But I missed the obvious pitfall of using the docker cp command that it only make temp change to a container which is still missing from the image and wont work when the image is deployed again locally or on cloud -->
+
+
+    </div>
+  </article><div id="giscus_thread" style="max-width: 1000px; margin: 0 auto;">
+  <script>
+    let giscusTheme = localStorage.getItem("theme");
+    let giscusAttributes = {
+        "src": "https://giscus.app/client.js",
+        "data-repo": "bhupenderbindal/bhupenderbindal.github.io",
+        "data-repo-id": "",
+        "data-category": "Comments",
+        "data-category-id": "",
+        "data-mapping": "title",
+        "data-strict": "1",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-input-position": "bottom",
+        "data-theme": giscusTheme,
+        "data-lang": "en",
+        "crossorigin": "anonymous",
+        "async": "",
+    };
+
+
+    let giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.getElementById("giscus_thread").appendChild(giscusScript);
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://giscus.app/?ref_noscript" rel="external nofollow noopener" target="_blank">comments powered by giscus.</a>
+</noscript>
+</div>
 </div>
 
+          </div>
+        </div>
+        
       
     </div>
 
@@ -175,6 +262,9 @@
   <!-- Medium Zoom JS -->
   <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
   <script defer src="/assets/js/zoom.js"></script>
+  <!-- Sidebar Table of Contents -->
+  <script defer src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+
 
   <!-- Bootstrap Table -->
   <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>

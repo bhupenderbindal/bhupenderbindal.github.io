@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://bhupenderbindal.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bhupenderbindal.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-17T12:19:45+00:00</updated><id>https://bhupenderbindal.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://bhupenderbindal.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bhupenderbindal.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-06-12T11:38:36+00:00</updated><id>https://bhupenderbindal.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">My first Advent of code problem</title><link href="https://bhupenderbindal.github.io/blog/2024/first-aoc-problem/" rel="alternate" type="text/html" title="My first Advent of code problem" /><published>2024-02-10T00:00:00+00:00</published><updated>2024-02-10T00:00:00+00:00</updated><id>https://bhupenderbindal.github.io/blog/2024/first-aoc-problem</id><content type="html" xml:base="https://bhupenderbindal.github.io/blog/2024/first-aoc-problem/"><![CDATA[<p>This post is about my first take at Advent of Code in the winter of 2023. I came to know about this through some people talking about it. So I thought to give it a try. I started with the “<a href="https://adventofcode.com/2023/day/13">Day 13: Point of incidence</a>” problem as coincidentally 13th, which is considered an unlucky number.</p>
 
 <h2 data-toc-text="Problem definition" id="problem-definition">Problem definition</h2>
@@ -30,7 +30,7 @@
 <ol>
   <li>Here the line of refelection is between columns 5 and 6. Column one is not involved in the reflection as 9 is an odd number of columns, here column 1 is the extra and ignored.
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>123456789
-     &gt;&lt;   
+    &gt;&lt;   
 #.##..##.
 ..#.##.#.
 ##......#
@@ -38,7 +38,7 @@
 ..#.##.#.
 ..##..##.
 #.#.##.#.
-     &gt;&lt;
+    &gt;&lt;
 123456789
 </code></pre></div>    </div>
   </li>
@@ -169,7 +169,54 @@ I could now add my solution for the second part and go over it but more importan
   - not setting the server name to "0.0.0.0" for the webapplication and hence could not connect to the host port
   [as discussed on stackoverflow question](https://stackoverflow.com/questions/39525820/docker-port-forwarding-not-working)
   - not creating a workdir in the container which can cause problem if your following command has to do with the files in the directory 
-  - using docker cp to copy a local file in container then launching the app. But I missed the obvious pitfall of using the docker cp command that it only make temp change to a container which is still missing from the image and wont work when the image is deployed again locally or on cloud -->]]></content><author><name></name></author><category term="programming" /><category term="logic" /><summary type="html"><![CDATA[experience of solving advent of code problem]]></summary></entry><entry><title type="html">Dockerfile, docker image and docker container :what is missed in a beginner tutorial</title><link href="https://bhupenderbindal.github.io/blog/2023/docker-blog/" rel="alternate" type="text/html" title="Dockerfile, docker image and docker container :what is missed in a beginner tutorial" /><published>2023-10-29T14:14:00+00:00</published><updated>2023-10-29T14:14:00+00:00</updated><id>https://bhupenderbindal.github.io/blog/2023/docker-blog</id><content type="html" xml:base="https://bhupenderbindal.github.io/blog/2023/docker-blog/"><![CDATA[<p>This post might be useful to someone who is trying to create docker images or run docker containers and has already gone through some “getting started” docker tutorials and blogs but still cannot get his/her head around it. If you are like me who does not have a computer science degree but finds it interesting, you might enjoy reading. Hence comments are welcomed from beginners as well as experts.</p>
+  - using docker cp to copy a local file in container then launching the app. But I missed the obvious pitfall of using the docker cp command that it only make temp change to a container which is still missing from the image and wont work when the image is deployed again locally or on cloud -->]]></content><author><name></name></author><category term="programming" /><category term="logic" /><summary type="html"><![CDATA[experience of solving advent of code problem]]></summary></entry><entry><title type="html">My first Advent of code problem :part2 in C++</title><link href="https://bhupenderbindal.github.io/blog/2024/first-aoc-problem-in-c++/" rel="alternate" type="text/html" title="My first Advent of code problem :part2 in C++" /><published>2024-02-10T00:00:00+00:00</published><updated>2024-02-10T00:00:00+00:00</updated><id>https://bhupenderbindal.github.io/blog/2024/first-aoc-problem-in-c++</id><content type="html" xml:base="https://bhupenderbindal.github.io/blog/2024/first-aoc-problem-in-c++/"><![CDATA[<p><strong>Intended audience: Beginners not masters.</strong></p>
+
+<p>Now, I will try to refactor the code for the problem and try to code the same logic in C++ and improve my understanding of programming concepts with this execercise. Followed by what I learned in this attempt, which might be useful for someone else reading it.</p>
+
+<p><strong>NOTE:</strong> This is no sense an attempt to compare the languages.
+ <!-- Followed by the comparison between the two in terms of obviously runtime.  --></p>
+
+<h2 data-toc-text="Python code refactoring" id="python-code-refactoring">Python code refactoring</h2>
+<p>Although I had looked at the shortest form of solutions code, I refactored my code myself for two reasons:</p>
+<ol>
+  <li>It will help me understand what parts and logic of my code were redundant or could be better written in the first place. For example, I found that I can write code with less of my favorite “if statement”, which is also recommended way. Another example is the “return statement” in combination with “if statement” is a point of play. One can add the return statement with the “if condition” and follow it with a return statement without using the “else condition” if no else logic is required and utilize this point of play as per requirement.</li>
+  <li>The short solutions are certainly good but my current coding style is more verbose than that. Copying the solution won’t help in improving. I still need to learn with practice to write logic and flow in a more precise way but with good readability for myself and others.</li>
+</ol>
+
+<h2 id="solving-in-c">Solving in C++</h2>
+
+<!-- After starting to solve in C++, I got the obvious realization that the same logic cannot be followed as data structures used in python with numpy has a very different API than that of data structures in C++. So I tried to adopt my base logic to C++.  -->
+
+<p>I dont want to repeat what are the differences between python and C++, as there are already many blogs and videos over it some bad, some good. Even I have watched a couple of them, but none of them can give me the feeling/understanding that I get by writing some C++ code myself and experience the most obvious differences, which anyone can understand them by hello-world in both the languages, and the more strong differences that hit you when you move from python to c++ code, reinforcing some programming concepts by experiencing how different languages deal with them. <em>As experienced people say talking about the difference between two languages is unncessary and problem one is trying to solve is more important. Do what is more comfortable to you and more importantly align with the goals of the problem/task one is trying to solve.</em></p>
+
+<p><!-- Or one is trying to appreciate the beauty of how different languages deal and apply the same concepts improving general understanding. --></p>
+
+<p>After all this great talk above, i am still a novice and will try to write “thats interesting” that I can see in short time.
+First of all, it was a tough job even to code the same logic in C++ due to the obvious lack of knowledge and practice with C++ containers and generic algorithms related to them.
+Hence I used for loops at many places iterating element by element and even transposing a vector of strings. Oh boy, that was entertaining and frustrating at the same time.</p>
+
+<p>I thought of attaching my solution in C++ but right now I avoid you the headache of reading it and in addition to that I am still on the journey of being comfortable sharing my not so good code. Hence moving to more important stuff in the next section.</p>
+
+<h2 id="lessons-learned-thats-interesting">Lessons learned/ That’s interesting</h2>
+<p>As I start writing this section, I discovered more important questions that I needed to look into.</p>
+
+<ul>
+  <li>why i even use vectors instead of arrays in c++: with list() and numpy array() one can easily create arrays as required. but in c++ one uses vectors if one does not the size of array beforehand</li>
+  <li>why create new arrays (in the findlor function) instead of using the slice as in python : is this issue of pass by value(copy with extra space) and pass by refernce for functions –&gt; read the book</li>
+  <li>concept of view and shallow copy when passing objects in python</li>
+</ul>
+
+<ol>
+  <li>As c++ requires type of the object that container holds, I have to write “vector&lt;vector<string>&gt; all_patterns;" which on the first sight looks extra work but in other look it promotes to think before about what are you going to store in the container which in turn promotes "think before you write code". This guide of type allows to think what type of contaianer, what it will be storing and what operations can be performed on it. In python, in my experience I create a list and simply keep on appending to it whatever type is required and later during further operations or in case of debugging I can think over the types etc. Again both have their uses.</string></li>
+  <li></li>
+</ol>
+
+<!-- 
+## Some mistakes which I did and their solution
+  - not setting the server name to "0.0.0.0" for the webapplication and hence could not connect to the host port
+  [as discussed on stackoverflow question](https://stackoverflow.com/questions/39525820/docker-port-forwarding-not-working)
+  - not creating a workdir in the container which can cause problem if your following command has to do with the files in the directory 
+  - using docker cp to copy a local file in container then launching the app. But I missed the obvious pitfall of using the docker cp command that it only make temp change to a container which is still missing from the image and wont work when the image is deployed again locally or on cloud -->]]></content><author><name></name></author><category term="programming" /><category term="logic" /><summary type="html"><![CDATA[AOC day 13 in C++ and comparison with python]]></summary></entry><entry><title type="html">Dockerfile, docker image and docker container :what is missed in a beginner tutorial</title><link href="https://bhupenderbindal.github.io/blog/2023/docker-blog/" rel="alternate" type="text/html" title="Dockerfile, docker image and docker container :what is missed in a beginner tutorial" /><published>2023-10-29T14:14:00+00:00</published><updated>2023-10-29T14:14:00+00:00</updated><id>https://bhupenderbindal.github.io/blog/2023/docker-blog</id><content type="html" xml:base="https://bhupenderbindal.github.io/blog/2023/docker-blog/"><![CDATA[<p>This post might be useful to someone who is trying to create docker images or run docker containers and has already gone through some “getting started” docker tutorials and blogs but still cannot get his/her head around it. If you are like me who does not have a computer science degree but finds it interesting, you might enjoy reading. Hence comments are welcomed from beginners as well as experts.</p>
 
 <h2 data-toc-text="Motivation" id="motivation-behind-a-post-about-docker">Motivation behind a post about docker</h2>
 
