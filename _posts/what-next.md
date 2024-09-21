@@ -13,6 +13,9 @@
     - the most watched songs on youtube have something to do with releasing deeper emotions
     - BUT BIGGER LESSON IS HOW TO DEBUG, WHEN COMPARING SOME CODE THEN COMPARE VARIABLES AT DIFF STEPS IN THE ALGORITHM UNLESS THEY ARE NOT EQUAL; VOILA GOT THE SOLUTION.
     
+- bash world
+    - watch -n<time in secs> <command like nvidia-smi>
+    
 # songs
 - ride -21 pilots
 - imagine dragons
@@ -34,6 +37,9 @@ Want to read:
 - how with breakpoint() and .shape i debugged many pytorch errors
 - expose/essay/detour on loss functions, their idea, misuse/extra-use
 
+# interesting
+- python caches immutable objects (int, string, tuple). for examples see: [caching_and_memsave](https://www.digitalocean.com/community/tutorials/python-id)
+
 # JOKES
 - https://github.com/pytorch/pytorch/issues/16417#issuecomment-1827046989 
 	scroll the issues page and got this, certainly not trying to mock and it works many times.
@@ -41,5 +47,9 @@ Want to read:
 
 - for website and blogging and answering
     - https://jdhao.github.io/about/  
+    
+# blog - memory leak
+- if you use python and do a data-processing-transformation-save task. eveything goes good unless one day you run out of memory and process gets killed. obviosuly youll say "I need a bigger cpu". if following that conclusion you ask "do i really need a bigger cpu?", then you are opened to the beautiful quest of knowledge that will lead you to things like profiling, scope and garbage collection and how easy is to make mistakes if you do not pay attention to the python's abstraction and utility to write pseudo code gives you power that one shall use with a bit care.
 
+The computer only does what we ask to do it, atleast in most of the cases, if we keep variables alive in the memory even if we dont need them, python compiler, oops interpreter, will keep them allocated in our cheap 64GB RAM.
 

@@ -19,10 +19,14 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a master’s student in Computational Sciences in Engineering course at TU Braunschweig with a keen interest in machine learning and python programming. Have a look at the [projects](/projects/) section! 
+I am a master’s student in Computational Sciences in Engineering course at TU Braunschweig with a keen interest in machine learning and programming. Have a look at the [projects](/projects/) section! 
 <!-- <a href="/projects/">projects</a> -->
-  
-"Does your model have data bias and leakage?" That is the question.
+
+Some helpful questions:
+- "Does your model have data bias and leakage, and causing amazingly inflated metrics ?" 
+- "Do I really need more computation or it's bad memory management ?"
+- "Are you solving the right problem or lost in the middle of the project ?"
+
 
 Quote from others:
 

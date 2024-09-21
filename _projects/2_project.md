@@ -15,7 +15,7 @@ to classify 2D micrograph projections using convolutional neural networks (CNNs)
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/mvcnn.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/mvcnn.png" title="example image" class="img-fluid rounded z-depth-1" width="600" height="400"%}
     </div>
 </div>
 <div class="caption">
@@ -23,3 +23,6 @@ to classify 2D micrograph projections using convolutional neural networks (CNNs)
 </div>
 
 Code and documentation: [GitHub repo](https://github.com/bhupenderbindal/sa_mvcnn).
+
+<!-- adding presentation -->
+<!-- <object data="/assets/pdf/Multi view classification of chloroplast cells_10.09.pdf" width="1000" height="1000" type='application/pdf'></object> -->
