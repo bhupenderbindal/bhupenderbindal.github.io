@@ -36,6 +36,7 @@ Want to read:
 - bash continues for next command if previous fails - disadvantage/geature of bash script
 - how with breakpoint() and .shape i debugged many pytorch errors
 - expose/essay/detour on loss functions, their idea, misuse/extra-use
+- ruff lint is fast but lacks rules, pylint is good atleast with --errors-only flag
 
 # interesting
 - python caches immutable objects (int, string, tuple). for examples see: [caching_and_memsave](https://www.digitalocean.com/community/tutorials/python-id)
