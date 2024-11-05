@@ -24,7 +24,8 @@
 -
 # Book recommendations
 Read:
-- FGP by ali abdaal
+- Feel-Good Productivity
+Buch von Ali Abdaal
 - deep work cal newport
 - mindset by --
 Want to read:

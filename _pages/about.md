@@ -37,3 +37,10 @@ Quote from others:
 <!-- Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
 
 <!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+
+
+<!-- ### Books wip
+- Style: Lessons in Clarity and Grace, by Joseph M. Williams, Joseph Bizup
+  It provides new outlook for writing in english language.
+- 
+Note: I might not have finished each of them -->
