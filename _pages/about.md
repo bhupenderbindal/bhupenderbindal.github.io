@@ -53,5 +53,3 @@ Quote from others:
   - Covers details and insights that are helpful for a machine-learning project
 - Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance
   - by Alex Hutchinson
-
-Note: I might not have finished each of them
