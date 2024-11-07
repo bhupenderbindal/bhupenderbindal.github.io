@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Student@ <a href='https://www.tu-braunschweig.de/en/'>TU Bruanschweig</a>
+subtitle: Master’s in Computational Sciences in Engineering course @ <a href='https://www.tu-braunschweig.de/en/'>TU Bruanschweig</a>
 
 profile:
   align: right
@@ -19,7 +19,12 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a master’s student in Computational Sciences in Engineering course at TU Braunschweig with a keen interest in machine learning and programming. Have a look at the [projects](/projects/) section! 
+I enjoy the visualisation of information, hence, computer vision, data transformation, geo-data, and still exploring.
+Have a look at the [projects](/projects/) section! 
+
+
+
+
 <!-- <a href="/projects/">projects</a> -->
 
 Some helpful questions:
@@ -39,8 +44,14 @@ Quote from others:
 <!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
 
-<!-- ### Books wip
-- Style: Lessons in Clarity and Grace, by Joseph M. Williams, Joseph Bizup
-  It provides new outlook for writing in english language.
-- 
-Note: I might not have finished each of them -->
+### Books
+- Style: Lessons in Clarity and Grace
+  - by Joseph M. Williams, Joseph Bizup
+  - It provides a new outlook for writing in the English language.
+- Machine Learning Design Patterns
+  - by Valliappa Lakshmanan, Sara Robinson, Michael Munn
+  - Covers details and insights that are helpful for a machine-learning project
+- Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance
+  - by Alex Hutchinson
+
+Note: I might not have finished each of them
