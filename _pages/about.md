@@ -22,18 +22,20 @@ social: true  # includes social icons at the bottom of the page
 I enjoy the visualisation of information, hence, computer vision, data transformation, geo-data, and still exploring.
 Have a look at the [projects](/projects/) section! 
 
+#### Currently:
+- Solving [Advent of Code - 2024](https://github.com/bhupenderbindal/aoc_2024)
 
 
 
 <!-- <a href="/projects/">projects</a> -->
 
-Some helpful questions:
+#### Some helpful questions:
 - "Does your model have data bias and leakage, and causing amazingly inflated metrics ?" 
 - "Do I really need more computation or it's bad memory management ?"
 - "Are you solving the right problem or lost in the middle of the project ?"
 
 
-Quote from others:
+#### Quote from others:
 
 “Models are almost always imperfect. This is fine as long as you are aware of this” - Michael Elad, Technion - Israel Institute of Technology, Computer Science
 
@@ -44,7 +46,7 @@ Quote from others:
 <!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
 
-### Books
+#### Books
 - Style: Lessons in Clarity and Grace
   - by Joseph M. Williams, Joseph Bizup
   - It provides a new outlook for writing in the English language.
