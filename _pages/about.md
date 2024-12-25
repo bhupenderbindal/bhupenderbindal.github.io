@@ -23,8 +23,9 @@ I enjoy the visualisation of information, hence, computer vision, data transform
 Have a look at the [projects](/projects/) section! 
 
 #### Currently:
-- Solving [Advent of Code - 2024](https://github.com/bhupenderbindal/aoc_2024)
 
+#### Was
+- Solving [Advent of Code - 2024](https://github.com/bhupenderbindal/aoc_2024)
 
 
 <!-- <a href="/projects/">projects</a> -->
@@ -55,3 +56,7 @@ Have a look at the [projects](/projects/) section!
   - Covers details and insights that are helpful for a machine-learning project
 - Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance
   - by Alex Hutchinson
+
+
+### Cool animation of robot moving boxes from [Advent of Code - 2024](https://github.com/bhupenderbindal/aoc_2024) - day15-part2 
+![day15-part2](assets/img/aoc_animation/cd.gif)
