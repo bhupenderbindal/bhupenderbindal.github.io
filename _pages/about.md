@@ -23,6 +23,7 @@ I enjoy the visualisation of information, hence, computer vision, data transform
 Have a look at the [projects](/projects/) section! 
 
 #### Currently:
+- Learning about PostgreSQL 
 
 #### Was
 - Solving [Advent of Code - 2024](https://github.com/bhupenderbindal/aoc_2024)
@@ -34,7 +35,7 @@ Have a look at the [projects](/projects/) section!
 - "Does your model have data bias and leakage, and causing amazingly inflated metrics ?" 
 - "Do I really need more computation or it's bad memory management ?"
 - "Are you solving the right problem or lost in the middle of the project ?"
-
+<!-- - Beware of the enthusiasm is written text driven by LLMs -->
 
 #### Quote from others:
 
