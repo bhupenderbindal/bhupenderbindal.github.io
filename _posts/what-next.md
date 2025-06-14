@@ -55,3 +55,6 @@ Want to read:
 
 The computer only does what we ask to do it, atleast in most of the cases, if we keep variables alive in the memory even if we dont need them, python compiler, oops interpreter, will keep them allocated in our cheap 64GB RAM.
 
+
+- "it was a rhetorical question errol, what do I told you about thinking?" -- Brick top
+- if you create a branch name with quotes, example 'branchwithquotes', and push it to gh - you cant fetch that in other repo with  git fetch origin 'branchwithquotes' 
